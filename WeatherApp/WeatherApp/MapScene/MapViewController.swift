@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MapViewController.swift
 //  WeatherApp
 //
 //  Created by Bruno Scheltzke on 16/10/19.
@@ -8,13 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-
+protocol MapViewProtocol {
+    
+    
 }
 
+class MapViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+    }
+    
+    func addMapView() {
+        
+    }
+    
+}

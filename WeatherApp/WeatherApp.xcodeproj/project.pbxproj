@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		8427CB8C2357DE5800C8CDE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427CB8B2357DE5800C8CDE2 /* AppDelegate.swift */; };
-		8427CB8E2357DE5800C8CDE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427CB8D2357DE5800C8CDE2 /* ViewController.swift */; };
-		8427CB912357DE5800C8CDE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8427CB8F2357DE5800C8CDE2 /* Main.storyboard */; };
 		8427CB932357DE5900C8CDE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8427CB922357DE5900C8CDE2 /* Assets.xcassets */; };
 		8427CB962357DE5900C8CDE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8427CB942357DE5900C8CDE2 /* LaunchScreen.storyboard */; };
 		8427CBA12357DE5900C8CDE2 /* WeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427CBA02357DE5900C8CDE2 /* WeatherAppTests.swift */; };
+		8427CBAC2357DFFB00C8CDE2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427CBAB2357DFFB00C8CDE2 /* MapViewController.swift */; };
+		8427CBAE2357E36E00C8CDE2 /* MapViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427CBAD2357E36E00C8CDE2 /* MapViewInteractor.swift */; };
+		8427CBB02357E38400C8CDE2 /* WeatherRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427CBAF2357E38400C8CDE2 /* WeatherRepository.swift */; };
+		8427CBB22357E39F00C8CDE2 /* MapViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427CBB12357E39F00C8CDE2 /* MapViewPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +30,16 @@
 /* Begin PBXFileReference section */
 		8427CB882357DE5800C8CDE2 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8427CB8B2357DE5800C8CDE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8427CB8D2357DE5800C8CDE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8427CB902357DE5800C8CDE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8427CB922357DE5900C8CDE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8427CB952357DE5900C8CDE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8427CB972357DE5900C8CDE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8427CB9C2357DE5900C8CDE2 /* WeatherAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8427CBA02357DE5900C8CDE2 /* WeatherAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppTests.swift; sourceTree = "<group>"; };
 		8427CBA22357DE5900C8CDE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8427CBAB2357DFFB00C8CDE2 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		8427CBAD2357E36E00C8CDE2 /* MapViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewInteractor.swift; sourceTree = "<group>"; };
+		8427CBAF2357E38400C8CDE2 /* WeatherRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepository.swift; sourceTree = "<group>"; };
+		8427CBB12357E39F00C8CDE2 /* MapViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +82,11 @@
 			isa = PBXGroup;
 			children = (
 				8427CB8B2357DE5800C8CDE2 /* AppDelegate.swift */,
-				8427CB8D2357DE5800C8CDE2 /* ViewController.swift */,
-				8427CB8F2357DE5800C8CDE2 /* Main.storyboard */,
 				8427CB922357DE5900C8CDE2 /* Assets.xcassets */,
 				8427CB942357DE5900C8CDE2 /* LaunchScreen.storyboard */,
 				8427CB972357DE5900C8CDE2 /* Info.plist */,
+				8427CBAF2357E38400C8CDE2 /* WeatherRepository.swift */,
+				8427CBB32357E3C500C8CDE2 /* MapScene */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -94,6 +98,16 @@
 				8427CBA22357DE5900C8CDE2 /* Info.plist */,
 			);
 			path = WeatherAppTests;
+			sourceTree = "<group>";
+		};
+		8427CBB32357E3C500C8CDE2 /* MapScene */ = {
+			isa = PBXGroup;
+			children = (
+				8427CBAB2357DFFB00C8CDE2 /* MapViewController.swift */,
+				8427CBAD2357E36E00C8CDE2 /* MapViewInteractor.swift */,
+				8427CBB12357E39F00C8CDE2 /* MapViewPresenter.swift */,
+			);
+			path = MapScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,7 +193,6 @@
 			files = (
 				8427CB962357DE5900C8CDE2 /* LaunchScreen.storyboard in Resources */,
 				8427CB932357DE5900C8CDE2 /* Assets.xcassets in Resources */,
-				8427CB912357DE5800C8CDE2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +210,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8427CB8E2357DE5800C8CDE2 /* ViewController.swift in Sources */,
+				8427CBB22357E39F00C8CDE2 /* MapViewPresenter.swift in Sources */,
 				8427CB8C2357DE5800C8CDE2 /* AppDelegate.swift in Sources */,
+				8427CBAE2357E36E00C8CDE2 /* MapViewInteractor.swift in Sources */,
+				8427CBB02357E38400C8CDE2 /* WeatherRepository.swift in Sources */,
+				8427CBAC2357DFFB00C8CDE2 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,14 +237,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8427CB8F2357DE5800C8CDE2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8427CB902357DE5800C8CDE2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8427CB942357DE5900C8CDE2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
