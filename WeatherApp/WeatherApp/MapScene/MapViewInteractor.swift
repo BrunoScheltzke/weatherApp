@@ -43,8 +43,8 @@ class MapViewInteractor: NSObject, MapViewInteractorProtocol {
                 switch result {
                 case .success(let weather):
                     Router.showWeatherScene(with: weather)
-                case .failure(let error):
-                    print(error.localizedDescription)
+                case .failure(_):
+                    self.presenter.presentGenericError()
                 }
             }
         }
@@ -61,11 +61,12 @@ extension MapViewInteractor: CLLocationManagerDelegate {
             let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
             presenter.presentUserCoordinate(center, on: region)
         } else {
-            print("Deu ruim")
+            presenter.presentMessageForNotFindingLocation()
         }
     }
+    
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("Failed to find user's location: \(error.localizedDescription)")
+        presenter.presentMessageForNotFindingLocation()
     }
     
 }

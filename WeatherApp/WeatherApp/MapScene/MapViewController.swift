@@ -79,15 +79,14 @@ class MapViewController: UIViewController {
     
 }
 
-extension MapViewController: MKMapViewDelegate {
-    
-    
-}
+extension MapViewController: MKMapViewDelegate {}
 
 extension MapViewController: MapViewProtocol {
     
     func displayError(_ error: String) {
-        // present alert with error
+        let alert = UIAlertController(title: "Sorry", message: error, preferredStyle: .alert)
+        alert.addAction(UIAlertAction.init(title: "Ok", style: .default))
+        present(alert, animated: true)
     }
     
     func displayUserCoordinate(_ coordinate: CLLocationCoordinate2D, on region: MKCoordinateRegion) {

@@ -11,7 +11,8 @@ import MapKit
 
 protocol MapViewPresenterProtocol {
     
-    func presentError(_ error: String)
+    func presentGenericError()
+    func presentMessageForNotFindingLocation()
     func presentUserCoordinate(_ coordinate: CLLocationCoordinate2D, on region: MKCoordinateRegion)
     
 }
@@ -24,12 +25,16 @@ class MapViewPresenter: MapViewPresenterProtocol {
         self.view = view
     }
     
-    func presentError(_ error: String) {
-        view.displayError(error)
-    }
-    
     func presentUserCoordinate(_ coordinate: CLLocationCoordinate2D, on region: MKCoordinateRegion) {
         view.displayUserCoordinate(coordinate, on: region)
+    }
+    
+    func presentGenericError() {
+        view.displayError("We are having some issues. Try again later.")
+    }
+    
+    func presentMessageForNotFindingLocation() {
+        view.displayError("We are having problems finding your location.")
     }
     
 }
