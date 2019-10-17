@@ -16,6 +16,7 @@
 		8427CBB02357E38400C8CDE2 /* WeatherRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427CBAF2357E38400C8CDE2 /* WeatherRepository.swift */; };
 		8427CBB22357E39F00C8CDE2 /* MapViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427CBB12357E39F00C8CDE2 /* MapViewPresenter.swift */; };
 		843ABDD22357EFCE0077D80F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843ABDD12357EFCE0077D80F /* Router.swift */; };
+		843ABDD42357F6B00077D80F /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843ABDD32357F6B00077D80F /* WeatherModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		8427CBAF2357E38400C8CDE2 /* WeatherRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepository.swift; sourceTree = "<group>"; };
 		8427CBB12357E39F00C8CDE2 /* MapViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewPresenter.swift; sourceTree = "<group>"; };
 		843ABDD12357EFCE0077D80F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		843ABDD32357F6B00077D80F /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				8427CBAF2357E38400C8CDE2 /* WeatherRepository.swift */,
 				843ABDD12357EFCE0077D80F /* Router.swift */,
 				8427CBB32357E3C500C8CDE2 /* MapScene */,
+				843ABDD32357F6B00077D80F /* WeatherModel.swift */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				8427CBB22357E39F00C8CDE2 /* MapViewPresenter.swift in Sources */,
 				8427CB8C2357DE5800C8CDE2 /* AppDelegate.swift in Sources */,
 				8427CBAE2357E36E00C8CDE2 /* MapViewInteractor.swift in Sources */,
+				843ABDD42357F6B00077D80F /* WeatherModel.swift in Sources */,
 				8427CBB02357E38400C8CDE2 /* WeatherRepository.swift in Sources */,
 				843ABDD22357EFCE0077D80F /* Router.swift in Sources */,
 				8427CBAC2357DFFB00C8CDE2 /* MapViewController.swift in Sources */,

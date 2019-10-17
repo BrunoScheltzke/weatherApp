@@ -13,7 +13,7 @@ import MapKit
 protocol MapViewInteractorProtocol {
     
     func getUserLocation()
-    
+    func getWeather(for coordinate: CLLocationCoordinate2D)
     
 }
 
@@ -21,9 +21,11 @@ class MapViewInteractor: NSObject, MapViewInteractorProtocol {
     
     private let locationManager = CLLocationManager()
     let presenter: MapViewPresenterProtocol
+    let repository: WeatherRepositoryProtocol
     
-    init(presenter: MapViewPresenterProtocol) {
+    init(presenter: MapViewPresenterProtocol, repository: WeatherRepositoryProtocol) {
         self.presenter = presenter
+        self.repository = repository
     }
     
     func getUserLocation() {
@@ -32,6 +34,17 @@ class MapViewInteractor: NSObject, MapViewInteractorProtocol {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
+        }
+    }
+    
+    func getWeather(for coordinate: CLLocationCoordinate2D) {
+        repository.fetchWeather(latitude: coordinate.latitude, longitude: coordinate.longitude) { (result) in
+            switch result {
+            case .success(let weather):
+                print(weather)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
         }
     }
     

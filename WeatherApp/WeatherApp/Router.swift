@@ -13,7 +13,7 @@ class Router {
     static func showMapScene(on navigationController: UINavigationController) {
         let mapVC = MapViewController()
         let presenter = MapViewPresenter(view: mapVC)
-        let interactor = MapViewInteractor(presenter: presenter)
+        let interactor = MapViewInteractor(presenter: presenter, repository: WeatherRepository())
         mapVC.interactor = interactor
         
         navigationController.pushViewController(mapVC, animated: true)

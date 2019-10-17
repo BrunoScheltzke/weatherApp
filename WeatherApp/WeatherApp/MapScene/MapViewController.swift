@@ -29,6 +29,7 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addMapView()
+        addsTapGestureToMapView()
         interactor?.getUserLocation()
     }
     
@@ -56,6 +57,24 @@ class MapViewController: UIViewController {
             mapView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ]
         view.addConstraints(constraints)
+    }
+    
+    func addsTapGestureToMapView() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(requestWeatherForLocation))
+        tap.numberOfTapsRequired = 2
+        mapView.subviews[0].addGestureRecognizer(tap)
+    }
+    
+    @objc func requestWeatherForLocation(gestureReconizer: UILongPressGestureRecognizer) {
+        let location = gestureReconizer.location(in: mapView)
+        let coordinate = mapView.convert(location,toCoordinateFrom: mapView)
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = coordinate
+        mapView.annotations.forEach { mapView.removeAnnotation($0) }
+        mapView.addAnnotation(annotation)
+        
+        interactor?.getWeather(for: coordinate)
     }
     
 }
