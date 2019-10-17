@@ -50,6 +50,19 @@ class MapViewInteractor: NSObject, MapViewInteractorProtocol {
         }
     }
     
+    func getUserWeather(with coordinate: CLLocationCoordinate2D) {
+        repository.fetchWeather(latitude: coordinate.latitude, longitude: coordinate.longitude) { (result) in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let weather):
+                    self.presenter.presentUserWeather(weatherModel: weather)
+                case .failure(_):
+                    break
+                }
+            }
+        }
+    }
+    
 }
 
 extension MapViewInteractor: CLLocationManagerDelegate {
@@ -60,6 +73,7 @@ extension MapViewInteractor: CLLocationManagerDelegate {
             let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
             let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
             presenter.presentUserCoordinate(center, on: region)
+            getUserWeather(with: center)
         } else {
             presenter.presentMessageForNotFindingLocation()
         }

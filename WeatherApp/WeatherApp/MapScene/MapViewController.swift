@@ -14,6 +14,7 @@ protocol MapViewProtocol {
     
     func displayError(_ error: String)
     func displayUserCoordinate(_ coordinate: CLLocationCoordinate2D, on region: MKCoordinateRegion)
+    func displayTemperature(_ temperature: String)
     
 }
 
@@ -94,6 +95,20 @@ extension MapViewController: MapViewProtocol {
         let annotation = MKPointAnnotation()
         annotation.coordinate = coordinate
         mapView.addAnnotation(annotation)
+    }
+    
+    func displayTemperature(_ temperature: String) {
+        let temperatureView = TemperatureView()
+        temperatureView.temperatureLabel.text = temperature
+        temperatureView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(temperatureView)
+        let constraints = [
+            temperatureView.heightAnchor.constraint(equalToConstant: 80),
+            temperatureView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            temperatureView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            temperatureView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -16)
+        ]
+        view.addConstraints(constraints)
     }
     
 }

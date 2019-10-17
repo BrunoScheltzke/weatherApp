@@ -21,6 +21,8 @@
 		843ABDDF235807440077D80F /* WeatherPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843ABDDE235807440077D80F /* WeatherPresenter.swift */; };
 		843ABDE623580AF90077D80F /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843ABDE423580AF90077D80F /* WeatherViewController.swift */; };
 		843ABDE723580AF90077D80F /* WeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843ABDE523580AF90077D80F /* WeatherViewController.xib */; };
+		843ABDE9235811AB0077D80F /* TemperatureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843ABDE8235811AB0077D80F /* TemperatureView.xib */; };
+		843ABDEB2358128B0077D80F /* TemperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843ABDEA2358128B0077D80F /* TemperatureView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		843ABDDE235807440077D80F /* WeatherPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPresenter.swift; sourceTree = "<group>"; };
 		843ABDE423580AF90077D80F /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		843ABDE523580AF90077D80F /* WeatherViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherViewController.xib; sourceTree = "<group>"; };
+		843ABDE8235811AB0077D80F /* TemperatureView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TemperatureView.xib; sourceTree = "<group>"; };
+		843ABDEA2358128B0077D80F /* TemperatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,8 @@
 				8427CBAB2357DFFB00C8CDE2 /* MapViewController.swift */,
 				8427CBAD2357E36E00C8CDE2 /* MapViewInteractor.swift */,
 				8427CBB12357E39F00C8CDE2 /* MapViewPresenter.swift */,
+				843ABDE8235811AB0077D80F /* TemperatureView.xib */,
+				843ABDEA2358128B0077D80F /* TemperatureView.swift */,
 			);
 			path = MapScene;
 			sourceTree = "<group>";
@@ -218,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8427CB962357DE5900C8CDE2 /* LaunchScreen.storyboard in Resources */,
+				843ABDE9235811AB0077D80F /* TemperatureView.xib in Resources */,
 				843ABDE723580AF90077D80F /* WeatherViewController.xib in Resources */,
 				8427CB932357DE5900C8CDE2 /* Assets.xcassets in Resources */,
 			);
@@ -237,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843ABDEB2358128B0077D80F /* TemperatureView.swift in Sources */,
 				8427CBB22357E39F00C8CDE2 /* MapViewPresenter.swift in Sources */,
 				843ABDE623580AF90077D80F /* WeatherViewController.swift in Sources */,
 				8427CB8C2357DE5800C8CDE2 /* AppDelegate.swift in Sources */,

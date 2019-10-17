@@ -14,6 +14,7 @@ protocol MapViewPresenterProtocol {
     func presentGenericError()
     func presentMessageForNotFindingLocation()
     func presentUserCoordinate(_ coordinate: CLLocationCoordinate2D, on region: MKCoordinateRegion)
+    func presentUserWeather(weatherModel: WeatherModel)
     
 }
 
@@ -35,6 +36,10 @@ class MapViewPresenter: MapViewPresenterProtocol {
     
     func presentMessageForNotFindingLocation() {
         view.displayError("We are having problems finding your location.")
+    }
+    
+    func presentUserWeather(weatherModel: WeatherModel) {
+        view.displayTemperature("\(weatherModel.temperature)")
     }
     
 }
