@@ -39,11 +39,13 @@ class MapViewInteractor: NSObject, MapViewInteractorProtocol {
     
     func getWeather(for coordinate: CLLocationCoordinate2D) {
         repository.fetchWeather(latitude: coordinate.latitude, longitude: coordinate.longitude) { (result) in
-            switch result {
-            case .success(let weather):
-                print(weather)
-            case .failure(let error):
-                print(error.localizedDescription)
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let weather):
+                    Router.showWeatherScene(with: weather)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
             }
         }
     }

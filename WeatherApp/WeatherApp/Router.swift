@@ -10,13 +10,29 @@ import UIKit
 
 class Router {
     
-    static func showMapScene(on navigationController: UINavigationController) {
+    private static var navigationController: UINavigationController?
+    
+    static func showInitialScene(on navigationController: UINavigationController) {
+        self.navigationController = navigationController
+        showMapScene()
+    }
+    
+    static func showMapScene() {
         let mapVC = MapViewController()
         let presenter = MapViewPresenter(view: mapVC)
         let interactor = MapViewInteractor(presenter: presenter, repository: WeatherRepository())
         mapVC.interactor = interactor
         
-        navigationController.pushViewController(mapVC, animated: true)
+        navigationController?.pushViewController(mapVC, animated: true)
+    }
+    
+    static func showWeatherScene(with weatherModel: WeatherModel) {
+        let weatherVC = WeatherViewController()
+        let presenter = WeatherPresenter(view: weatherVC)
+        let interactor = WeatherInteractor(presenter: presenter, weatherModel: weatherModel)
+        weatherVC.interactor = interactor
+        
+        navigationController?.pushViewController(weatherVC, animated: true)
     }
     
 }
