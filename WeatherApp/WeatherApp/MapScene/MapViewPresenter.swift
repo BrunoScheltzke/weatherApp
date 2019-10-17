@@ -7,9 +7,29 @@
 //
 
 import Foundation
+import MapKit
 
-class MapViewPresenterProtocol {
+protocol MapViewPresenterProtocol {
     
+    func presentError(_ error: String)
+    func presentUserCoordinate(_ region: MKCoordinateRegion)
     
+}
+
+class MapViewPresenter: MapViewPresenterProtocol {
+    
+    let view: MapViewProtocol
+    
+    init(view: MapViewProtocol) {
+        self.view = view
+    }
+    
+    func presentError(_ error: String) {
+        view.displayError(error)
+    }
+    
+    func presentUserCoordinate(_ region: MKCoordinateRegion) {
+        view.displayUserCoordinate(region)
+    }
     
 }

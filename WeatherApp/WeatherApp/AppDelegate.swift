@@ -19,9 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
         
-        let navController = UINavigationController(rootViewController: MapViewController())
+        let navController = UINavigationController()
         window.rootViewController = navController
         window.makeKeyAndVisible()
+
+        Router.showMapScene(on: navController)
         
         return true
     }

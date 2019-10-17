@@ -15,6 +15,7 @@
 		8427CBAE2357E36E00C8CDE2 /* MapViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427CBAD2357E36E00C8CDE2 /* MapViewInteractor.swift */; };
 		8427CBB02357E38400C8CDE2 /* WeatherRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427CBAF2357E38400C8CDE2 /* WeatherRepository.swift */; };
 		8427CBB22357E39F00C8CDE2 /* MapViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427CBB12357E39F00C8CDE2 /* MapViewPresenter.swift */; };
+		843ABDD22357EFCE0077D80F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843ABDD12357EFCE0077D80F /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		8427CBAD2357E36E00C8CDE2 /* MapViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewInteractor.swift; sourceTree = "<group>"; };
 		8427CBAF2357E38400C8CDE2 /* WeatherRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepository.swift; sourceTree = "<group>"; };
 		8427CBB12357E39F00C8CDE2 /* MapViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewPresenter.swift; sourceTree = "<group>"; };
+		843ABDD12357EFCE0077D80F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				8427CB942357DE5900C8CDE2 /* LaunchScreen.storyboard */,
 				8427CB972357DE5900C8CDE2 /* Info.plist */,
 				8427CBAF2357E38400C8CDE2 /* WeatherRepository.swift */,
+				843ABDD12357EFCE0077D80F /* Router.swift */,
 				8427CBB32357E3C500C8CDE2 /* MapScene */,
 			);
 			path = WeatherApp;
@@ -214,6 +217,7 @@
 				8427CB8C2357DE5800C8CDE2 /* AppDelegate.swift in Sources */,
 				8427CBAE2357E36E00C8CDE2 /* MapViewInteractor.swift in Sources */,
 				8427CBB02357E38400C8CDE2 /* WeatherRepository.swift in Sources */,
+				843ABDD22357EFCE0077D80F /* Router.swift in Sources */,
 				8427CBAC2357DFFB00C8CDE2 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
