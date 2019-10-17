@@ -13,7 +13,7 @@ import CoreLocation
 protocol MapViewProtocol {
     
     func displayError(_ error: String)
-    func displayUserCoordinate(_ region: MKCoordinateRegion)
+    func displayUserCoordinate(_ coordinate: CLLocationCoordinate2D, on region: MKCoordinateRegion)
     
 }
 
@@ -62,7 +62,6 @@ class MapViewController: UIViewController {
 
 extension MapViewController: MKMapViewDelegate {
     
-
     
 }
 
@@ -72,8 +71,11 @@ extension MapViewController: MapViewProtocol {
         // present alert with error
     }
     
-    func displayUserCoordinate(_ region: MKCoordinateRegion) {
+    func displayUserCoordinate(_ coordinate: CLLocationCoordinate2D, on region: MKCoordinateRegion) {
         mapView.setRegion(region, animated: true)
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = coordinate
+        mapView.addAnnotation(annotation)
     }
     
 }

@@ -44,7 +44,7 @@ extension MapViewInteractor: CLLocationManagerDelegate {
             locationManager.stopUpdatingLocation()
             let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
             let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
-            presenter.presentUserCoordinate(region)
+            presenter.presentUserCoordinate(center, on: region)
         } else {
             print("Deu ruim")
         }

@@ -12,7 +12,7 @@ import MapKit
 protocol MapViewPresenterProtocol {
     
     func presentError(_ error: String)
-    func presentUserCoordinate(_ region: MKCoordinateRegion)
+    func presentUserCoordinate(_ coordinate: CLLocationCoordinate2D, on region: MKCoordinateRegion)
     
 }
 
@@ -28,8 +28,8 @@ class MapViewPresenter: MapViewPresenterProtocol {
         view.displayError(error)
     }
     
-    func presentUserCoordinate(_ region: MKCoordinateRegion) {
-        view.displayUserCoordinate(region)
+    func presentUserCoordinate(_ coordinate: CLLocationCoordinate2D, on region: MKCoordinateRegion) {
+        view.displayUserCoordinate(coordinate, on: region)
     }
     
 }
